@@ -41,3 +41,17 @@ let age = 17;
 
 console.log(job, age);
 console.log(typeof age); // number으로 반환
+//2-3
+// \' 작은 따옴표
+// \" 큰 따옴표
+// \n 줄 바꿈
+// \t 탭
+// \\ 백슬래시
+const NAME = "홍길동";
+let age2 = 20;
+let married = false;
+
+console.log(
+  `제 이름은 ${NAME}, 나이는 ${age2}세구요, \
+${married ? "기혼" : "미혼"}입니다.`
+);
