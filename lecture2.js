@@ -35,6 +35,9 @@ console.log("변경 전", r);
 
 r = null;
 console.log("변경 후", r);
+//2-2
+let job = "학생";
+let age = 17;
 
-let f = null;
-console.log(typeof null, typeof f);
+console.log(job, age);
+console.log(typeof age); // number으로 반환
