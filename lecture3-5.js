@@ -3,6 +3,13 @@
 
 // 1 ~ 5 출력
 let x = 0;
+while (true) {
+  if (x++ >= 5) break; // 😎
+  console.log(x);
+}
+
+// 1-3-5-7 출력
+let x = 0;
 while (x < 14) {
   const xNow = x++;
 

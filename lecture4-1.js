@@ -59,3 +59,8 @@ const mult = (x, y) => x * y;
 
 console.log(mult(2, 7));
 // 2.3 번은 호이스팅 안됨
+
+function cal(a, b, c) {
+  return a + b + c;
+}
+console.log(cal);
