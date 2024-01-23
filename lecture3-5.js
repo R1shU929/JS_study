@@ -2,10 +2,10 @@
 // while - 조건이 참인 동안 반복수행
 
 // 1 ~ 5 출력
-let x = 0;
+let a = 0;
 while (true) {
-  if (x++ >= 5) break; // 😎
-  console.log(x);
+  if (a++ >= 5) break; // 😎
+  console.log(a);
 }
 
 // 1-3-5-7 출력

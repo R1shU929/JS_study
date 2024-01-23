@@ -63,4 +63,4 @@ console.log(mult(2, 7));
 function cal(a, b, c) {
   return a + b + c;
 }
-console.log(cal);
+console.log("cal" + cal(1, 1, 1));
