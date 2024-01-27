@@ -39,4 +39,4 @@ class YalcoChicken {
   }
 }
 const chain1 = new YalcoChicken("판교", 3); // ⚠️ 오류 발생!
-// getter에는 setter
+// getter에는 setter ...
