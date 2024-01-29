@@ -34,9 +34,29 @@ class YalcoChicken {
     return this.no + "호점";
   }
   set no(no) {
+    // -> 여기 부분에 다른 필드명 사용해야함 !
     // 무한반복
     this.no = no;
   }
 }
 const chain1 = new YalcoChicken("판교", 3); // ⚠️ 오류 발생!
-// getter에는 setter ...
+// setter에는 다른 필드명 사용 !
+
+// 2. 은닉
+// 캡슐화
+// 객체 내부의 값을 감추기 !
+// 원래는 기본적으로 public (은닉 안됨)
+
+// private 필드를 통한 은닉
+class Employee {
+  #name = ""; // 필드명 앞에 #붙이기
+  #age = 0; // 이렇게 클래스 안에 정의하기
+  constructor(name, age) {
+    this.#name = name;
+    this.#age = age;
+  }
+}
+
+const emp1 = new Employee("김복동", 32);
+
+// 클래스 내에서는 pri
