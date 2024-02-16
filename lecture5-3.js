@@ -91,7 +91,7 @@ class YalcoChicken {
 const chain0 = new YalcoChicken("(미정)");
 console.log(chain0, chain0.introduce());
 
-// 5. 정적 static 필드와 메서드
+// 5 정적 static 필드와 메서드
 class YalcoChicken {
   // 정적 변수와 메서드
   static brand = "얄코치킨";
@@ -111,4 +111,3 @@ class YalcoChicken {
 console.log(YalcoChicken);
 console.log(YalcoChicken.contact());
 // 정적 메서드는 딱 그 공간만 차지. 딱 1개
-//
