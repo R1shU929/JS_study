@@ -85,3 +85,42 @@ console.log(
   word.indexOf("습"), // 2
   word.lastIndexOf("습") //2
 );
+
+// 4) includes, startsWith, endsWith
+// 인자로 주어진 문자열 포함 (아무곳에 / 맨 앞에 / 맨 끝에) 여부 불리언으로 반환
+const sentence = "옛날에 호랑이 한 마리가 살았어요.";
+
+for (const word of ["옛날에", "호랑이", "살았어요.", "나무꾼"]) {
+  console.log("includes", word, sentence.includes(word)); // tttf
+  console.log("startsWith", word, sentence.startsWith(word)); // tfff
+  console.log("endsWith", word, sentence.endsWith(word)); // fftf
+  console.log("- - - - -");
+}
+
+// 5) search
+// 인자로 받은 🔗 정규표현식과 일치하는 첫 부분의 인덱스 반환
+// 없을 시 -1 반환
+
+console.log(
+  "하루가 7번 지나면 1주일이 되는 거야.".search(/[0-9]/), // 4
+  "하루가 일곱 번 지나면 일주일이 되는 거야.".search(/[0-9]/) // -1
+);
+
+// 6) substring
+// 인자로 전달받은 인덱스(들)을 기준으로 자른 문자열 반환
+
+const word = "ABCDEFGHIJKL";
+const part = word.substring(4, 8); // 4부터 8까지
+
+console.log(word, part); // ABCDEFGHIJKL EFGH
+// 인자를 하나만 넣으면 해당 인덱스부터 끝까지
+// 음수나 범위 외 숫자는 범위 내 최소/최대 숫자로
+
+// 7) slice
+// substring과 같으나 음수로 뒤에서부터 자를 수 있음
+
+const word = "ABCDEFGHIJKL";
+console.log(
+  word.substring(-4), // ABCDEFGHIJKL
+  word.slice(-4) // IJKL
+);
