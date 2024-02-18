@@ -75,3 +75,13 @@ console.log(
   "안녕하세요~".at(1), // 녕
   "안녕하세요~".at(-1) // ~
 );
+
+// 3) indexOf, lastIndexOf
+// 인자로 주어진 문자열이 앞, 또는 뒤에서 처음 나타나는 인덱스 반환
+// 포함되지 않을 시 -1 반환
+
+const word = "반갑습니다!";
+console.log(
+  word.indexOf("습"), // 2
+  word.lastIndexOf("습") //2
+);
