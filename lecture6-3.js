@@ -124,3 +124,82 @@ console.log(
   word.substring(-4), // ABCDEFGHIJKL
   word.slice(-4) // IJKL
 );
+
+// 8) split
+// 인수로 주어진 문자열이나 정규표현식으로 분리하여 배열을 반환
+
+console.log(
+  "010-1234-5678".split("-"), // ['010', '1234', '5678']
+  "ABC1DEF2GHI3JKL".split(/[0-9]/) // ['ABC', 'DEF', 'GHI', 'JKL']
+);
+
+// 인자로 빈 문자열을 넣거나 인자 생략시
+const word = "안녕하세요";
+
+console.log(
+  word.split(""), //  ['안', '녕', '하', '세', '요']
+  word.split() // ['안녕하세요']
+);
+
+const word = "하나 하면 할머니가 지팡이 짚고서 잘잘잘";
+
+console.log(
+  word.split(" ", 2), // ['하나', '하면']
+  word.split(" ", 4) //  ['하나', '하면', '할머니가', '지팡이']
+);
+// 두 번째 인자로 배열의 최대 길이 지정 가능
+
+// 9) trim, trimStart, trimEnd
+// 앞뒤의 공백 제거하여 반환
+// 단, 중간의 공백은 제거하지 않음
+const word = "  Hello World!  ";
+console.log(`--${word}--`); // --  Hello World!  --
+console.log(`--${word.trim()}--`); // --Hello World!--
+console.log(`--${word.trimStart()}--`); // --Hello World!  --
+console.log(`--${word.trimEnd()}--`); // --  Hello World!--
+
+// 10) repeat
+// 인자로 주어진 정수만큼 문자열을 반복하여 반환
+
+const word = "호이";
+console.log(word.repeat(3)); // 호이 호이 호이
+console.log(word.repeat(0));
+console.log(word.repeat());
+console.log(word.repeat(-1));
+// 인수가 없거나 0이면 빈 문자열 반환, 음수면 오류 발생
+
+// 11) replace, replaceAll
+// 첫 번째 인자로 받은 문자열 또는 정규식을 두 번째 인자로 바꿔준 결과를 반환
+
+console.log(
+  "이스탄불은 터키의 수도이다.".replace("터키", "튀르키예") // 이스탄불은 튀르키예의 수도이다
+);
+
+const word = "밥 좀 먹자, 밥. 응? 야, 밥 좀 먹자고 밥, 밥!";
+
+console.log(word.replace("밥", "라면")); // 라면 좀 먹자, 밥. 응? 야, 밥 좀 먹자고 밥, 밥!
+// 해당하는 첫 번째 부분만 바꿈
+console.log(word.replace(/밥/g, "라면")); // 라면 좀 먹자, 라면. 응? 야, 라면 좀 먹자고 라면, 라면!
+// 해당하는 부분 모두 바꿈
+// 모두 치환하려면 정규식 /.../g 사용
+
+console.log(word.replaceAll("밥", "라면"));
+console.log(word.replaceAll(/밥/g, "라면"));
+// replaceAll은 /../g 을 사용하지 않아도 모두 바꿔줌
+
+// ⭐️ 메서드 체이닝 method chaining
+// 값을 반환하는 인스턴스 메서드를 연속으로 사용
+
+const word = " 모두 HELLO! ";
+const rpFrom = "hello";
+const rpTo = "bye";
+
+console.log(
+  word
+    .trimStart() // '모두 HELLO! '
+    .toLowerCase() // '모두 hello! '
+    .replaceAll(rpFrom, rpTo) // '모두 bye! '
+    .toUpperCase() // '모두 BYE! '
+    .repeat(3) // '모두 BYE! 모두 BYE! 모두 BYE! '
+    .trimEnd() // '모두 BYE! 모두 BYE! 모두 BYE!'
+);
