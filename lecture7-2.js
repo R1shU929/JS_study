@@ -272,5 +272,6 @@ const orgArr = [
 const arr0 = orgArr.flat();
 const arr1 = orgArr.flat(2);
 
-console.log('N:', arr0);
-console.log('1:', arr1);
+console.log('N:', arr0); // N: [1, 2, 3, 4, 5, Array(2)]
+console.log('1:', arr1); // 1: [1, 2, 3, 4, 5, 6, Array(2)]
+
