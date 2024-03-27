@@ -1,6 +1,7 @@
 // 10-1 set
 // 중복되지 않는 값들의 집합
 // 같은값 여러번 포함 불가
+// 순서가 의미 없음
 
 // 1. 기본 사용법
 const set1 = new Set();
@@ -28,8 +29,22 @@ console.log(set1); // set1 {}
 
 // 2. 이터러블로서의 set
 
-// 1. for of 문 사용 가능
+// 1) for of 문 사용 가능
 for (item of set) {
-    console.log(item);
+    console.log(item); 
 }
+
+// 2) 스프레드 문법
+const newArr = {...set};
+
+console.log(newArr); 
+
+// 활용 !! 유용함
+const arr1 = [ 1,1,2,2,2,3,4,5];
+const arr2 = [... new Set(arr1)];
+
+console.log(arr2);
+
+// 3) 디스트럭쳐링
+
 
